@@ -18,10 +18,12 @@
 using namespace std;
 
 /************************************************************
- * Approach: 
+ * Approach: (Initial)
+ * Use two stacks to differentiate between the outermost
+ * boundary and the internal structure.
  *
- * Time Complexity:
- * Space Complexity:
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
  ************************************************************/
 
 string removeOuterParentheses(const string &s)
@@ -72,10 +74,13 @@ string removeOuterParentheses(const string &s)
 }
 
 /************************************************************
- * Approach:
+ * Approach: (Optimized)
+ * Utilize a 'depth' counter to track nesting levels.
+ * Parentheses are only appended to the result if they exist
+ * at a nesting level greater than 0.
  *
- * Time Complexity:
- * Space Complexity:
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
  ************************************************************/
 
 string removeOuterParenthesesOptimized(const string &s)
